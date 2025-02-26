@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Option</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>What would you like to check today?</h1>
+        <button onclick="location.href='/home?check=email'">Check Email</button>
+        <button onclick="location.href='/home?check=password'">Check Password</button>
+    </div>
+</body>
+</html>
