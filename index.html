@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Breach Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>DATA BREACH DETECTION TOOL</h1>
+        
+        <div class="form-section">
+            <h2>Check Email Breach</h2>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="checkEmail()">Check Email</button>
+            <div id="emailResult"></div>
+        </div>
+
+        <div class="form-section">
+            <h2>Check Password Breach</h2>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button onclick="checkPassword()">Check Password</button>
+            <div id="passwordResult"></div>
+        </div>
+    </div>
+</body>
+</html>

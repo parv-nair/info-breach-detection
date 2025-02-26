@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="loading-page">
+    <h1 class="loading-title" id="loadingText"></h1>
+    <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+    </div>
+    
+    <script>
+        const text = "INFO BREACH DETECTOR";
+        let index = 0;
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("loadingText").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+
+        setTimeout(() => {
+            window.location.href = "/select";
+        }, 5000);
+    </script>
+</body>
+</html>
