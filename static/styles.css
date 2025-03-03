@@ -1,0 +1,149 @@
+/* Dark gradient background */
+body {
+    background: linear-gradient(to right, #0A1828, #091322);
+    color: #BFA181;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container */
+.container {
+    background: rgba(10, 24, 40, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    box-shadow: 0 0 25px rgba(23, 133, 130, 0.3);
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #BFA181;
+}
+
+/* Input Fields (Curved, Light Tone, Modern) */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 12px; /* Curved Edges */
+    border: 1px solid #BFA181;
+    background: #1E2D40; /* Lighter Tone */
+    color: #BFA181;
+    font-size: 1.1rem; /* More Attractive */
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border: 2px solid #178582;
+    box-shadow: 0 0 12px #178582;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #178582, #0F4C5C);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #23A299, #146A6B);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(23, 133, 130, 0.5);
+}
+
+/* Spacing between sections */
+.form-section {
+    margin-bottom: 50px; /* Increased spacing */
+}
+
+/* Centered Loading Screen */
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0A1828;
+    flex-direction: column;
+}
+
+/* Loading Bar */
+.loading-bar-container {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+    margin-top: 20px;
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0%;
+    background: #BFA181;
+    animation: loadingAnimation 3s linear infinite;
+}
+
+/* Animations */
+@keyframes loadingAnimation {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.loading-title {
+    font-size: 2rem;
+    color: #BFA181;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    animation: typewriter 3s steps(30) forwards, zoomIn 3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make the container fit smaller screens */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Reduce title size on mobile */
+    }
+
+    input {
+        width: 100%; /* Expand input fields for mobile */
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
