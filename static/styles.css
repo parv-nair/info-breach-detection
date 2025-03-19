@@ -1,5 +1,6 @@
 /* Dark gradient background */
 body {
+    
     background: linear-gradient(to right, #0A1828, #091322);
     color: #BFA181;
     font-family: 'Poppins', sans-serif;
