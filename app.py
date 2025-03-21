@@ -3,6 +3,7 @@ import hashlib
 import requests
 import os
 
+
 app = Flask(__name__)
 
 # Use your API Key (Ensure to set this securely in production)
